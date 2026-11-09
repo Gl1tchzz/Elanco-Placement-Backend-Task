@@ -1,0 +1,18 @@
+# Run the same checks on a clean machine whenever code is pushed to GitHub.
+name: Node backend checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Fetch the source code, then install the project's Node version.
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      # npm ci installs the exact dependency tree recorded in package-lock.json.
+      - run: npm ci
+      - run: npm test
+      - run: npm run check
+      - run: npm audit --audit-level=moderate
