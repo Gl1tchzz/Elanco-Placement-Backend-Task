@@ -11,7 +11,7 @@
     "test": "node --test tests/*.test.js",
     "demo": "node app/demo.js",
     "check": "node --check app/main.js && node --check app/import-data.js && node --check app/database.js && node --check app/validation.js && node --check app/openapi.js && node --check app/demo.js && prettier --check app tests README.md package.json .github/workflows/test.yml",
-    "format": "prettier --write app tests README.md docs package.json .github/workflows/test.yml"
+    "format": "prettier --write app tests README.md package.json .github/workflows/test.yml"
   },
   "dependencies": {
     "express": "5.3.0",
