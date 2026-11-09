@@ -92,3 +92,6 @@ When you refresh, the importer streams records into a temporary staging table. I
 For activity change, use `as_of=2024-12-30` and `window_days=90`. The source observations inspected during development span 2012–2024. A recent import does not make those observations current.
 
 The extension returns counts, percentage change and an explanation. Fewer than five previous-window reports is labelled an insufficient baseline; a zero baseline produces a null percentage. This is descriptive analytics, **not a trained AI model or disease-risk forecast**.
+
+## Video Walkthrough
+https://youtu.be/B4SCh2CU71o
